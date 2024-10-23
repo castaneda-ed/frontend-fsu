@@ -1,9 +1,30 @@
-# React + Vite
+### fsu-frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ALL user should be able to:
 
-Currently, two official plugins are available:
+- view a list of all departments
+- view a single department so I can see more details, such as:
+  name, description, images, contact info
+- list of faculty in the department
+- view a list of all faculty
+- view a single professor so I can see more details, such as: name, bio, profile image, contact info
+- department this professor belongs to
+- register for and log into an administrator account
+- Loged in user should be able to :
+  add a new department
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# frontend-fsu
+- remove an existing department
+
+- change the name, description, or banner image of an existing department
+
+- add or remove professors to/from an existing department
+
+- add a new professor
+
+- remove an existing professor
+
+- change the name, email, bio, or profile image of an existing professor
+
+- change the department an existing professor belongs to
+
+### Use React Toolkit and Toolkit query to get the data from the backend
