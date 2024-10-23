@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "./api";
-import { logout } from "../../../../2408.BookBuddy/src/features/account/authSlice";
 
 /** User create and log in acount endpoints*/
 
