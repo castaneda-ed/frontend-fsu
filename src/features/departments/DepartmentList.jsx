@@ -7,7 +7,7 @@ import "./DepartmentList.css";
 // Function that renders a list of all departments
 export default function DepartmentList() {
   const { data: departments, isLoading } = useGetDepartmentsQuery();
-
+  console.log(departments);
   const [filter, setFilter] = useState("");
   const searchRegex = new RegExp(filter, "i");
 

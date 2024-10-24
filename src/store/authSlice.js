@@ -7,11 +7,11 @@ const authApi = api.injectEndpoints({
   endpoints: (builder) => ({
     register: builder.mutation({
       query: (credentials) => ({
-        url: "/register",
+        url: "/users/register",
         method: "POST",
         body: credentials,
       }),
-      transformErrorResponse: (response) => response.data.message,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["User"],
     }),
     login: builder.mutation({
@@ -20,7 +20,7 @@ const authApi = api.injectEndpoints({
         method: "POST",
         body: credentials,
       }),
-      transformErrorResponse: (response) => response.data.message,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["User"],
     }),
   }),

@@ -6,8 +6,6 @@ import { useGetFacultyQuery } from "../../store/facultySlice";
 export default function ProfessorList() {
   const { data: professors, isLoading } = useGetFacultyQuery();
 
-  console.log(professors);
-
   const [filter, setFilter] = useState("");
   const searchRegex = new RegExp(filter, "i");
 
