@@ -3,44 +3,44 @@ import api from "./api";
 const departmentApi = api.injectEndpoints({
   endpoints: (build) => ({
     getDepartments: build.query({
-      query: () => "departments",
-      transformResponse: (response) => response.departments,
-      transformErrorResponse: (response) => response.departments.error,
+      query: () => "/departments",
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["Department"],
     }),
     getDepartment: build.query({
       query: (id) => `departments/${id}`,
       transformResponse: (response) => response,
-      transformErrorResponse: (response) => response.error,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["Department"],
     }),
     postDepartment: build.mutation({
       query: (newDepartment) => ({
-        url: "departments",
+        url: "/departments",
         method: "POST",
         body: newDepartment,
       }),
-      transformResponse: (response) => response.department,
-      transformErrorResponse: (response) => response.error,
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["Department"],
     }),
     deleteDepartment: build.mutation({
       query: (id) => ({
-        url: `departments/${id}`,
+        url: `/departments/${id}`,
         method: "DELETE",
       }),
-      transformResponse: (response) => response.message,
-      transformErrorResponse: (response) => response.error,
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["Department"],
     }),
     updateDepartment: build.mutation({
       query: (id, ...updatedDepartment) => ({
-        url: `departments/${id}`,
+        url: `/departments/${id}`,
         method: "PATCH",
         body: updatedDepartment,
       }),
-      transformResponse: (response) => response.updateDepartment,
-      transformErrorResponse: (response) => response.error,
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => response,
       invalidatesTags: ["Department"],
     }),
   }),

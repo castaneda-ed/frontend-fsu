@@ -1,8 +1,6 @@
 header {
   padding: 15px;
 
-  background-color: rgb(96, 143, 143);
-
   font-size: 1.1rem;
 }
 nav {
@@ -26,7 +24,7 @@ a {
   color: black;
 }
 
-li:hover {
+.navlink:hover {
   cursor: pointer;
   scale: 1.1;
 }

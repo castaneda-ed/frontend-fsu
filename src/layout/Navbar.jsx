@@ -22,20 +22,20 @@ export default function Navbar() {
           <h3>FSU UNIVERSITY</h3>
         </NavLink>
         <menu>
-          <li>
+          <li className="navlink">
             <NavLink to="/departments">Departments</NavLink>
           </li>
-          <li>
+          <li className="navlink">
             <NavLink to="/faculty">Faculty</NavLink>
           </li>
           {token ? (
-            <li>
+            <li className="navlink">
               <a href="#" onClick={clickToLogout}>
                 Log Out
               </a>
             </li>
           ) : (
-            <li>
+            <li className="navlink">
               <NavLink to="/login">Log In</NavLink>
             </li>
           )}
